@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :abcds
   root'static_pages#home'
   get 'static_pages/home'
   get 'static_pages/help'
