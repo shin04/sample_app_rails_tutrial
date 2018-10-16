@@ -1,0 +1,22 @@
+<%= form_with(model: abcd, local: true) do |form| %>
+  <% if abcd.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(abcd.errors.count, "error") %> prohibited this abcd from being saved:</h2>
+
+      <ul>
+      <% abcd.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :efg %>
+    <%= form.text_field :efg %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Abcds</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Efg</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @abcds.each do |abcd| %>
+      <tr>
+        <td><%= abcd.efg %></td>
+        <td><%= link_to 'Show', abcd %></td>
+        <td><%= link_to 'Edit', edit_abcd_path(abcd) %></td>
+        <td><%= link_to 'Destroy', abcd, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Abcd', new_abcd_path %>
